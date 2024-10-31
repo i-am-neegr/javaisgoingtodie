@@ -38,14 +38,14 @@ public class Main {
 
         System.out.println("\ntask3\n");
 
-        int totalExpenses = 0;
+        float totalExpenses = 0;
         float averageExpenses;
 
         for (int expence : expenses) {
             totalExpenses += expence;
         }
 
-        averageExpenses = (float) (totalExpenses / expenses.length);
+        averageExpenses = totalExpenses / expenses.length;
         System.out.println(averageExpenses);
 
         System.out.println("\ntask4\n");
@@ -54,15 +54,8 @@ public class Main {
         int length = reverseFullName.length;
 
 
-        for (int i = 0; i < length / 2; i++) {
-            final char left = reverseFullName[i];
-            final char right = reverseFullName[length - 1 - i];
-            reverseFullName[i] = right;
-            reverseFullName[length - 1 - i] = left;
+        for (int i = length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
-
-        System.out.println(reverseFullName);
-
-
     }
 }
